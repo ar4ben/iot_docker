@@ -1,0 +1,30 @@
+version: "3"
+services:
+  influxdb:
+    image: influxdb
+    ports:
+      - "8086:8086"
+    volumes:
+      - influxdb:/var/lib/influxdb
+  sensor:
+    image: ar4ben/iot_sensor
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}
+      - BOT_CHAT=${BOT_CHAT}
+    privileged: true
+    depends_on:
+      - influxdb
+    volumes:
+      - /dev/serial0:/dev/serial0
+  dashboard:
+    image: grafana/grafana
+    depends_on:
+      - sensor
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana:/var/lib/grafana
+      - ./grafana/provisioning/:/etc/grafana/provisioning/
+volumes:
+  grafana:
+  influxdb:
