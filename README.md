@@ -26,7 +26,13 @@
 - Install Docker-compose:
   `pip3 install docker-compose`
 
-- Clone this repo and run:
+- Clone this repo and change *.env* file. App uses telegram for alert notifications. Create new telegram bot ([instruction](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-telegram?view=azure-bot-service-4.0)) and paste your token and your chat_id in *.env* file:
+
+  `BOT_TOKEN=YOUR_TOKEN`
+  
+  `BOT_CHAT=YOUR_CHAT_ID`
+
+- Run:
 
   `docker-compose up`
 
