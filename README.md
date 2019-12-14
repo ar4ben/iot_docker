@@ -10,9 +10,9 @@
   [Instruction](https://monitorserviceatelierueda.blogspot.com/2018/11/how-to-measure-room-co2-concentration.html "Instruction")
 - For reading from MH-Z19:
 
-  1. Add the line "enable_uart=1" to the '/boot/config.txt' file
-  2. Remove the phrase "console=serial0,115200" from the '/boot/cmdline.txt' file
-  3. Reboot Pi.
+  * Add the line "enable_uart=1" to the '/boot/config.txt' file
+  * Remove the phrase "console=serial0,115200" from the '/boot/cmdline.txt' file
+  * Reboot Pi.
 
 - Install Docker:
 
@@ -24,7 +24,6 @@
 
 - Install Docker-compose:
   `pip3 install docker-compose`
-  Run docker-compose up
 
 - Clone this repo and run:
 
