@@ -63,20 +63,7 @@
       "pluginVersion": "6.5.2",
       "targets": [
         {
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
+          "groupBy": [],
           "measurement": "co2",
           "orderByTime": "ASC",
           "policy": "default",
@@ -156,20 +143,7 @@
       "pluginVersion": "6.5.2",
       "targets": [
         {
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
+          "groupBy": [],
           "measurement": "humidity_and_temp",
           "orderByTime": "ASC",
           "policy": "default",
@@ -249,20 +223,7 @@
       "pluginVersion": "6.5.2",
       "targets": [
         {
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
+          "groupBy": [],
           "measurement": "humidity_and_temp",
           "orderByTime": "ASC",
           "policy": "default",
@@ -344,7 +305,7 @@
             },
             {
               "params": [
-                "null"
+                "linear"
               ],
               "type": "fill"
             }
@@ -477,13 +438,13 @@
           "groupBy": [
             {
               "params": [
-                "2m"
+                "5m"
               ],
               "type": "time"
             },
             {
               "params": [
-                "null"
+                "linear"
               ],
               "type": "fill"
             }
@@ -503,7 +464,7 @@
               },
               {
                 "params": [],
-                "type": "last"
+                "type": "mean"
               }
             ]
           ],
@@ -751,7 +712,7 @@
             },
             {
               "params": [
-                "null"
+                "linear"
               ],
               "type": "fill"
             }
@@ -788,7 +749,7 @@
             },
             {
               "params": [
-                "null"
+                "linear"
               ],
               "type": "fill"
             }
@@ -825,7 +786,7 @@
             },
             {
               "params": [
-                "null"
+                "linear"
               ],
               "type": "fill"
             }
@@ -928,5 +889,5 @@
   "timezone": "",
   "title": "iot",
   "uid": "qbHpRQZRk",
-  "version": 13
+  "version": 1
 }
